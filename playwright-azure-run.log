@@ -1,0 +1,13 @@
+
+Running tests using Playwright workspaces.
+Test run created successfully.
+Playwright Workspaces reporting: ENABLED
+Collecting artifacts: screenshots, videos, traces.
+Uploading artifacts to: storage account= pwstrgrrd8712, storage container= 6111f4cc-b209-4d95-a01c-c1137fbe9ab4, folder= 609355e6-dabb-48df-9774-2e376e579e4e
+Reporting upload status: SUCCESS
+Published report URL: https://ms.portal.azure.com/#view/Microsoft_Azure_CloudNativeTesting/TestReport.ReactView/testRunId/609355e6-dabb-48df-9774-2e376e579e4e/resourceId/%2Fsubscriptions%2Fbc6ca79a-da96-4f0a-8171-6e2c518ab028%2Fresourcegroups%2Frrd%2Fproviders%2Fmicrosoft.loadtestservice%2Fplaywrightworkspaces%2Fsamanthadiazplaywright
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

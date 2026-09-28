@@ -1,0 +1,85 @@
+azure:identity:info EnvironmentCredential => Found the following environment variables: 
+azure:identity:verbose EnvironmentCredential => AZURE_CLIENT_SEND_CERTIFICATE_CHAIN: undefined; sendCertificateChain: false
+azure:identity:info WorkloadIdentityCredential => Found the following environment variables: 
+azure:identity:warning DefaultAzureCredential => Skipped createDefaultWorkloadIdentityCredential because of an error creating the credential: CredentialUnavailableError: WorkloadIdentityCredential: is unavailable. clientId is a required parameter. In DefaultAzureCredential and ManagedIdentityCredential, this can be provided as an environment variable - "AZURE_CLIENT_ID".
+        See the troubleshooting guide for more information: https://aka.ms/azsdk/js/identity/workloadidentitycredential/troubleshoot
+azure:core-client:warning The baseUri option for SDK Clients has been deprecated, please use endpoint instead.
+azure:core-client:warning The baseUri option for SDK Clients has been deprecated, please use endpoint instead.
+azure:identity:info ManagedIdentityCredential => Using DefaultToImds managed identity.
+azure:core-client:warning The baseUri option for SDK Clients has been deprecated, please use endpoint instead.
+azure:identity:warning DefaultAzureCredential => Skipped createDefaultBrokerCredential because of an error creating the credential: Error: Broker for WAM was requested, but no plugin was configured or no authentication record was found. You must install the @azure/identity-broker plugin package (npm install --save @azure/identity-broker) and enable it by importing `useIdentityPlugin` from `@azure/identity` and calling useIdentityPlugin(nativeBrokerPlugin) before using enableBroker.
+azure:playwright:info Playwright version being used - 1.63.0
+
+Running tests using Playwright workspaces.
+azure:playwright:info Entra id access token setup start
+azure:playwright:info Fetching entra id access token
+azure:identity:info DefaultAzureCredential => getToken() => Skipping createDefaultWorkloadIdentityCredential, reason: WorkloadIdentityCredential: is unavailable. clientId is a required parameter. In DefaultAzureCredential and ManagedIdentityCredential, this can be provided as an environment variable - "AZURE_CLIENT_ID".
+        See the troubleshooting guide for more information: https://aka.ms/azsdk/js/identity/workloadidentitycredential/troubleshoot
+azure:identity:info ManagedIdentityCredential => getToken() => Using the MSAL provider for Managed Identity.
+azure:identity:info ManagedIdentityCredential - Token Exchange => ManagedIdentityCredential - Token Exchange: Unavailable. The environment variables needed are: AZURE_CLIENT_ID (or the client ID sent through the parameters), AZURE_TENANT_ID and AZURE_FEDERATED_TOKEN_FILE
+azure:identity:info ManagedIdentityCredential => getToken() => MSAL Identity source: DefaultToImds
+azure:identity:info ManagedIdentityCredential => getToken() => Using the IMDS endpoint to probe for availability.
+azure:identity:info ManagedIdentityCredential - IMDS => ManagedIdentityCredential - IMDS: Pinging the Azure IMDS endpoint
+azure:core-rest-pipeline:info Request: {
+  "url": "http://169.254.169.254/metadata/identity/oauth2/token",
+  "method": "GET",
+  "headers": {
+    "accept": "application/json",
+    "accept-encoding": "gzip,deflate",
+    "user-agent": "azsdk-js-identity/4.13.3 core-rest-pipeline/1.25.0 Node/24.19.0 (Darwin 25.6.0; x64)",
+    "x-ms-client-request-id": "842aa338-4d0e-44b7-bcdd-e19c2916af09"
+  },
+  "timeout": 1000,
+  "withCredentials": false,
+  "enableBrowserStreams": false,
+  "disableKeepAlive": false,
+  "requestId": "842aa338-4d0e-44b7-bcdd-e19c2916af09",
+  "allowInsecureConnection": true
+}
+azure:identity:verbose ManagedIdentityCredential - IMDS => ManagedIdentityCredential - IMDS: Caught error AbortError: The operation was aborted. Rejecting from abort signal callback while making request.
+azure:identity:info ManagedIdentityCredential - IMDS => ManagedIdentityCredential - IMDS: The Azure IMDS endpoint is unavailable
+azure:identity:error ManagedIdentityCredential => getToken() => ERROR. Scopes: https://management.core.windows.net/.default. Error message: Attempted to use the IMDS endpoint, but it is not available..
+azure:identity:info AzureCliCredential => getToken() => Using the scope https://management.core.windows.net/.default
+azure:identity:info AzureCliCredential => getToken() => ERROR. Scopes: https://management.core.windows.net/.default. Error message: Azure CLI could not be found. Please visit https://aka.ms/azure-cli for installation instructions and then, once installed, authenticate to your Azure account using 'az login'..
+azure:identity:info AzureCliCredential => getToken() => ERROR. Scopes: https://management.core.windows.net/.default. Error message: Azure CLI could not be found. Please visit https://aka.ms/azure-cli for installation instructions and then, once installed, authenticate to your Azure account using 'az login'..
+azure:identity:info AzurePowerShellCredential => getToken() => Using the scope https://management.core.windows.net/.default
+azure:identity:info AzurePowerShellCredential => getToken() => ERROR. Scopes: https://management.core.windows.net/.default. Error message: Error: Unable to execute PowerShell. Ensure that it is installed in your system. To troubleshoot, visit https://aka.ms/azsdk/js/identity/powershellcredential/troubleshoot..
+azure:identity:info AzureDeveloperCliCredential => getToken() => Using the scopes https://management.core.windows.net/.default
+azure:identity:info AzureDeveloperCliCredential => getToken() => ERROR. Scopes: https://management.core.windows.net/.default. Error message: Azure Developer CLI couldn't be found. To mitigate this issue, see the troubleshooting guidelines at https://aka.ms/azsdk/js/identity/azdevclicredential/troubleshoot..
+azure:identity:info AzureDeveloperCliCredential => getToken() => ERROR. Scopes: https://management.core.windows.net/.default. Error message: Azure Developer CLI couldn't be found. To mitigate this issue, see the troubleshooting guidelines at https://aka.ms/azsdk/js/identity/azdevclicredential/troubleshoot..
+azure:identity:info DefaultAzureCredential => getToken() => Skipping createDefaultBrokerCredential, reason: Broker for WAM was requested, but no plugin was configured or no authentication record was found. You must install the @azure/identity-broker plugin package (npm install --save @azure/identity-broker) and enable it by importing `useIdentityPlugin` from `@azure/identity` and calling useIdentityPlugin(nativeBrokerPlugin) before using enableBroker.
+azure:identity:info ChainedTokenCredential => getToken() => ERROR. Scopes: https://management.core.windows.net/.default. Error message: ChainedTokenCredential authentication failed.
+CredentialUnavailableError: EnvironmentCredential is unavailable. No underlying credential could be used. To troubleshoot, visit https://aka.ms/azsdk/js/identity/environmentcredential/troubleshoot.
+CredentialUnavailableError: ManagedIdentityCredential: Authentication failed. Message Attempted to use the IMDS endpoint, but it is not available.
+CredentialUnavailableError: Visual Studio Code Authentication is not available. Ensure you have have Azure Resources Extension installed in VS Code, signed into Azure via VS Code, installed the @azure/identity-vscode package, and properly configured the extension.
+CredentialUnavailableError: Azure CLI could not be found. Please visit https://aka.ms/azure-cli for installation instructions and then, once installed, authenticate to your Azure account using 'az login'.
+CredentialUnavailableError: Error: Unable to execute PowerShell. Ensure that it is installed in your system. To troubleshoot, visit https://aka.ms/azsdk/js/identity/powershellcredential/troubleshoot.
+CredentialUnavailableError: Azure Developer CLI couldn't be found. To mitigate this issue, see the troubleshooting guidelines at https://aka.ms/azsdk/js/identity/azdevclicredential/troubleshoot..
+azure:playwright:error AggregateAuthenticationError: ChainedTokenCredential authentication failed.
+CredentialUnavailableError: EnvironmentCredential is unavailable. No underlying credential could be used. To troubleshoot, visit https://aka.ms/azsdk/js/identity/environmentcredential/troubleshoot.
+CredentialUnavailableError: ManagedIdentityCredential: Authentication failed. Message Attempted to use the IMDS endpoint, but it is not available.
+CredentialUnavailableError: Visual Studio Code Authentication is not available. Ensure you have have Azure Resources Extension installed in VS Code, signed into Azure via VS Code, installed the @azure/identity-vscode package, and properly configured the extension.
+CredentialUnavailableError: Azure CLI could not be found. Please visit https://aka.ms/azure-cli for installation instructions and then, once installed, authenticate to your Azure account using 'az login'.
+CredentialUnavailableError: Error: Unable to execute PowerShell. Ensure that it is installed in your system. To troubleshoot, visit https://aka.ms/azsdk/js/identity/powershellcredential/troubleshoot.
+CredentialUnavailableError: Azure Developer CLI couldn't be found. To mitigate this issue, see the troubleshooting guidelines at https://aka.ms/azsdk/js/identity/azdevclicredential/troubleshoot.
+azure:playwright:info Entra id access token teardown start
+azure:playwright:info Reporter configuration: [
+  [
+    "html",
+    {
+      "open": "never"
+    }
+  ],
+  [
+    "/Users/samanthadiaz/PlayWrightAutomation/node_modules/@azure/playwright/dist/commonjs/reporter/index.js",
+    null
+  ]
+]
+azure:playwright:info Using service config: true
+Reporting upload status: FAILED
+Test run creation failed during setup.
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m
