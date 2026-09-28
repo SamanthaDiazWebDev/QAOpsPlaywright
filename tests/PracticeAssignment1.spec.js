@@ -50,6 +50,6 @@ test('Practice Playwright Assignment 1', async ({ page }) => {
   await expect(matchedCard).toBeVisible();
   const seatsAfterBooking = parseInt(await matchedCard.getByText('seats available').innerText());
   expect(seatsAfterBooking).toBe(seatsBeforeBooking - 1);
-
+  //test
 
 });
